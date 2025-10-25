@@ -1,0 +1,19 @@
+@use '../../styles/variables.scss' as *;
+
+.header {
+  display: flex;
+}
+
+.login-btn {
+  background-color: transparent;
+  padding: 0 20px;
+  color: $color-gray-500;
+
+  &:hover {
+    background-color: $color-primary-blue;
+    color: white;
+    transition:
+      background-color 0.4s ease-in-out,
+      color 0.4s ease-in-out;
+  }
+}
