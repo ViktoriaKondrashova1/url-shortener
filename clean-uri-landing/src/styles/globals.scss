@@ -7,9 +7,11 @@
 }
 
 body {
+  padding: $spacing-lg $spacing-xl;
   font-family: $font-family-primary;
   font-size: $font-size-body;
   font-weight: $font-weight-regular;
+  color: $color-gray-950;
 }
 
 a {
@@ -24,8 +26,4 @@ li {
 button {
   border: none;
   cursor: pointer;
-}
-
-main {
-  padding: $spacing-lg;
 }
