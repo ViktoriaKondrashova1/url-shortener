@@ -1,0 +1,12 @@
+@use '../../styles/variables.scss' as *;
+
+.button {
+  padding: 0 20px;
+  background-color: $color-primary-blue;
+  color: white;
+
+  &:hover {
+    opacity: 0.5;
+    transition: opacity 0.4s ease-in-out;
+  }
+}
