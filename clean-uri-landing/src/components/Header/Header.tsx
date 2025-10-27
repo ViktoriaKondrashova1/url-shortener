@@ -11,8 +11,8 @@ export const Header = () => {
         <Logo text={APP_LOGO} />
         <HStack as='nav' gap={8} className='header-menu'>
           {MENU_ITEMS.map(el => (
-            <Link key={el.id} href={el.href}>
-              {el.text}
+            <Link key={el.id}>
+              {el.name}
             </Link>
           ))}
         </HStack>

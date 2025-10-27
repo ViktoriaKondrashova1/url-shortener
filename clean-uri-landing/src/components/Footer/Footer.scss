@@ -1,0 +1,22 @@
+@use '../../styles/variables.scss' as *;
+
+.footer-links {
+  .chakra-listbox__content {
+    border: none;
+    gap: 10px;
+    margin-top: $spacing-sm;
+  }
+
+  label {
+    font-weight: $font-weight-bold;
+  }
+
+  .chakra-listbox__item {
+    &:hover {
+      background-color: transparent;
+      color: $color-primary-blue;
+      transition:
+        color 0.4s ease-in-out;
+    }
+  }
+}
