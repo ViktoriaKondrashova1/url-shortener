@@ -1,22 +1,41 @@
 @use '../../styles/variables.scss' as *;
 
-.footer-links {
-  .chakra-listbox__content {
-    border: none;
-    gap: 10px;
-    margin-top: $spacing-sm;
-  }
+.footer {
+  padding: $spacing-lg $spacing-xl;
+  background-color: $color-gray-950;
+  color: white;
+  justify-content: space-between;
 
-  label {
-    font-weight: $font-weight-bold;
-  }
-
-  .chakra-listbox__item {
-    &:hover {
+  &-links {
+    .chakra-listbox__content {
       background-color: transparent;
-      color: $color-primary-blue;
-      transition:
-        color 0.4s ease-in-out;
+      border: none;
+      gap: 10px;
+      margin-top: $spacing-sm;
+    }
+
+    label {
+      font-weight: $font-weight-bold;
+    }
+
+    .chakra-listbox__item {
+      &:hover {
+        background-color: transparent;
+        color: $color-primary-blue;
+        transition: color 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &-media-btn {
+    &:hover {
+      background-color: $color-primary-blue;
+      transition: background-color 0.4s ease-in-out;
+    }
+
+    img {
+      width: 20px;
+      height: 20px;
     }
   }
 }
