@@ -1,11 +1,13 @@
 @use '../../styles/variables.scss' as *;
 
 .hero {
+  width: 100%;
   background-image: url('@/assets/illustration-working.svg');
   background-repeat: no-repeat;
   background-position: right;
   background-size: contain;
   padding: 60px 0;
+  margin-bottom: 60px;
 
   &-content {
     width: 500px;
@@ -21,7 +23,7 @@
     }
 
     button {
-        width: 150px;
+      width: 150px;
     }
   }
 }
