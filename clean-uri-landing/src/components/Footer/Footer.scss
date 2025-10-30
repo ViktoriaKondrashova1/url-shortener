@@ -28,9 +28,10 @@
   }
 
   &-media-btn {
+    transition: background-color 0.4s ease-in-out;
+
     &:hover {
       background-color: $color-primary-blue;
-      transition: background-color 0.4s ease-in-out;
     }
 
     img {

@@ -4,9 +4,9 @@
   padding: 0 20px;
   background-color: $color-primary-blue;
   color: white;
+  transition: background-color 0.4s ease-in-out;
 
   &:hover {
-    opacity: 0.5;
-    transition: opacity 0.4s ease-in-out;
+    background-color: lighten($color-primary-blue, 20%);
   }
 }
