@@ -1,0 +1,17 @@
+@use '../../styles/variables.scss' as *;
+
+.link-block {
+  background-color: white;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.original-link {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.shortened {
+  color: $color-primary-blue;
+}
