@@ -1,4 +1,7 @@
 import { createListCollection } from '@chakra-ui/react';
+import brandRecognitionIcon from '../assets/icon-brand-recognition.svg';
+import detailedRecordsIcon from '../assets/icon-detailed-records.svg';
+import fullyCustomIcon from '../assets/icon-fully-customizable.svg';
 
 export const APP_LOGO = 'Shortly';
 
@@ -53,3 +56,24 @@ export const FOOTER_LINKS = createListCollection({
     },
   ],
 });
+
+export const STAT_INFO = [
+  {
+    id: 1,
+    icon: brandRecognitionIcon,
+    title: 'Brand Recognition',
+    desc: 'Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.',
+  },
+  {
+    id: 2,
+    icon: detailedRecordsIcon,
+    title: 'Detailed Records',
+    desc: 'Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.',
+  },
+  {
+    id: 3,
+    icon: fullyCustomIcon,
+    title: 'Fully Customizable',
+    desc: 'Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.',
+  },
+];

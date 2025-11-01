@@ -1,6 +1,6 @@
 @use '../../styles/variables.scss' as *;
 
-.statistics {
+.stats {
   margin-top: $spacing-xxl;
 
   h2 {
@@ -10,7 +10,59 @@
 
   p {
     color: $color-gray-500;
-    max-width: 540px;
-    text-align: center;
+  }
+
+  &-info {
+    width: 100%;
+    margin-top: $spacing-lg;
+    justify-content: space-between;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background-color: $color-primary-blue;
+      z-index: 0;
+    }
+  }
+
+  &-block {
+    background-color: white;
+    position: relative;
+    padding: $spacing-xl $spacing-lg $spacing-lg;
+    flex: 1;
+    z-index: 1;
+
+    &:nth-child(2) {
+      margin-top: $spacing-xl;
+    }
+    &:nth-child(3) {
+      margin-top: $spacing-xxl;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    &-icon {
+      width: 70px;
+      height: 70px;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-primary-purple;
+      border-radius: 50%;
+      position: absolute;
+      left: $spacing-md;
+      top: -$spacing-lg;
+
+      img {
+        width: $spacing-lg;
+        height: $spacing-lg;
+      }
+    }
   }
 }
