@@ -24,6 +24,7 @@ export const ShortenedLink: FC<LinksBlockProps> = link => {
       <HStack gap={8}>
         <Text className='shortened'>{shortenedLink}</Text>
         <AppButton
+          w='100px'
           text={isButtonClicked ? 'Copied!' : 'Copy'}
           disabled={isButtonClicked}
           onClick={() => handleCopyClick(shortenedLink)}
