@@ -1,0 +1,28 @@
+@use '../../styles/variables.scss' as *;
+
+.boost {
+  justify-content: center;
+  align-items: center;
+  background-color: $color-primary-purple;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: $spacing-xxl;
+  padding: $spacing-xl 0;
+  color: white;
+  background-image: url('@/assets/bg-boost-desktop.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  h2 {
+    font-weight: $font-weight-bold;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 150px;
+  }
+}
