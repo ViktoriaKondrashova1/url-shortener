@@ -1,0 +1,16 @@
+@use '../../styles/variables.scss' as *;
+
+.statistics {
+  margin-top: $spacing-xxl;
+
+  h2 {
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+  }
+
+  p {
+    color: $color-gray-500;
+    max-width: 540px;
+    text-align: center;
+  }
+}
