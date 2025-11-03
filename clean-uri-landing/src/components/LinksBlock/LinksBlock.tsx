@@ -9,7 +9,7 @@ interface Props {
 export const LinksBlock: FC<Props> = ({links}) => {
   return links.map(el => (
     <ShortenedLink
-      key={el.shortenedLink}
+      key={el.id}
       originalLink={el.originalLink}
       shortenedLink={el.shortenedLink}
     />
