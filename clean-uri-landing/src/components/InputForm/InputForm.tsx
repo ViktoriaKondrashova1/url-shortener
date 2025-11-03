@@ -2,10 +2,12 @@ import { HStack, Input } from '@chakra-ui/react';
 import { AppButton } from '../Button/Button';
 import { getShortenedURL } from '../../api/getShortenedURL';
 import { ChangeEvent, useState } from 'react';
+import { useStoredLinks } from '../../hooks/useStoredLinks';
 import './InputForm.scss';
 
 export const InputForm = () => {
   const [inputValue, setInputValue] = useState<string>('');
+  const { addLink } = useStoredLinks();
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
@@ -13,8 +15,12 @@ export const InputForm = () => {
 
   const handleButtonClick = async () => {
     const link = inputValue.trim();
+    if (!link) return;
     const result = await getShortenedURL(link);
-    console.log('shortened: ', result);
+    if (result) {
+      addLink(link, result);
+    }
+    setInputValue('');
   };
 
   return (

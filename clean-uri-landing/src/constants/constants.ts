@@ -79,3 +79,5 @@ export const STAT_INFO = [
     desc: 'Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.',
   },
 ];
+
+export const STORAGE_KEY = 'shortened_links';
