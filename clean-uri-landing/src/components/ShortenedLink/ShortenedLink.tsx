@@ -4,7 +4,7 @@ import { FC, useState } from 'react';
 import { LinksBlockProps } from 'types/types';
 import './ShortenedLink.scss';
 
-export const ShortenedLink: FC<Omit<LinksBlockProps, "id">> = link => {
+export const ShortenedLink: FC<Omit<LinksBlockProps, 'id'>> = link => {
   const { originalLink, shortenedLink } = link;
   const [isButtonClicked, setisButtonClicked] = useState<boolean>(false);
 

@@ -1,17 +1,13 @@
-import { LinksBlockProps } from 'types/types';
 import { ShortenedLink } from '../ShortenedLink/ShortenedLink';
-import { FC } from 'react';
+import { useLinks } from '../../hooks/useLinks';
 
-interface Props {
-  links: LinksBlockProps[];
-}
+export const LinksBlock = () => {
+  const { links } = useLinks();
 
-export const LinksBlock: FC<Props> = ({links}) => {
-  return links.map(el => (
-    <ShortenedLink
-      key={el.id}
-      originalLink={el.originalLink}
-      shortenedLink={el.shortenedLink}
-    />
-  ));
+  return (
+    links &&
+    links.map(el => (
+      <ShortenedLink key={el.id} originalLink={el.originalLink} shortenedLink={el.shortenedLink} />
+    ))
+  );
 };

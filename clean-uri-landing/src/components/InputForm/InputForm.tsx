@@ -2,12 +2,12 @@ import { HStack, Input } from '@chakra-ui/react';
 import { AppButton } from '../Button/Button';
 import { getShortenedURL } from '../../api/getShortenedURL';
 import { ChangeEvent, useState } from 'react';
-import { useStoredLinks } from '../../hooks/useStoredLinks';
+import { useLinks } from '../../hooks/useLinks';
 import './InputForm.scss';
 
 export const InputForm = () => {
   const [inputValue, setInputValue] = useState<string>('');
-  const { addLink } = useStoredLinks();
+  const { addLink } = useLinks();
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
