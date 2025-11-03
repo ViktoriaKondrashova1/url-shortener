@@ -3,27 +3,11 @@ import { Stack } from '@chakra-ui/react';
 import { LinksBlock } from '../LinksBlock/LinksBlock';
 import './InputSection.scss';
 
-export const InputSection = () => {
-  const links = [
-    {
-      originalLink:
-        'https://chatgpt.com/c/68fb61fa-6a94-8327-a383-667693874134764545342422434343555555555555555555555555555555555555',
-      shortenedLink: 'https://reLink/gop3X9',
-    },
-    {
-      originalLink: 'https://chatgpt.com/c/68fb61fa-6a94-8327-a383-667693874134',
-      shortenedLink: 'https://reLink/gop3X9',
-    },
-    {
-      originalLink: 'https://chatgpt.com/c/68fb61fa-6a94-8327-a383-667693874134',
-      shortenedLink: 'https://reLink/gop3X9',
-    },
-  ];
-
+export const InputSection = () => {  
   return (
     <Stack className='input-section'>
       <InputForm />
-      <LinksBlock links={links} />
+      <LinksBlock />
     </Stack>
   );
 };

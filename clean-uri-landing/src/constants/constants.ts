@@ -3,6 +3,8 @@ import brandRecognitionIcon from '../assets/icon-brand-recognition.svg';
 import detailedRecordsIcon from '../assets/icon-detailed-records.svg';
 import fullyCustomIcon from '../assets/icon-fully-customizable.svg';
 
+export const API_URL = '/api/shorten';
+
 export const APP_LOGO = 'Shortly';
 
 export const MENU_ITEMS = [
@@ -77,3 +79,5 @@ export const STAT_INFO = [
     desc: 'Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.',
   },
 ];
+
+export const STORAGE_KEY = 'shortened_links';
