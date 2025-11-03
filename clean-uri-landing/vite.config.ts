@@ -16,4 +16,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  server: {
+    proxy: {
+      '/api/shorten': {
+        target: 'https://cleanuri.com/api/v1',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api\/shorten/, '/shorten'),
+      },
+    },
+  },
 });
