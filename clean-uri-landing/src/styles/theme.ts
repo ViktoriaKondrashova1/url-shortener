@@ -12,6 +12,7 @@ export const config = defineConfig({
       colors: {
         blue: { value: 'hsl(180, 66%, 49%)' },
         purple: { value: 'hsl(257, 27%, 26%)' },
+        appRed: { value: 'hsl(0, 87%, 67%)' },
         gray: {
           400: { value: 'hsl(0, 0%, 75%)' },
           500: { value: 'hsl(257, 7%, 63%)' },
