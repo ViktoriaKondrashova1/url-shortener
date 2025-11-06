@@ -9,6 +9,7 @@ import './InputForm.scss';
 export const InputForm = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
   const { addLink } = useLinks();
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -24,10 +25,12 @@ export const InputForm = () => {
   };
 
   const handleButtonClick = async () => {
+    setLoading(true);
     const link = inputValue.trim();
 
     if (!link) {
       setError('Please add a link');
+      setLoading(false);
       return;
     }
 
@@ -38,6 +41,8 @@ export const InputForm = () => {
       setError('');
     } catch {
       setError('Invalid link');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -58,7 +63,13 @@ export const InputForm = () => {
         />
         {error && <ErrorAlert description={error} />}
       </Field.Root>
-      <AppButton rounded='md' text=' Shorten It!' onClick={handleButtonClick} />
+      <AppButton
+        loading={loading}
+        loadingText='Shortening...'
+        rounded='md'
+        text=' Shorten It!'
+        onClick={handleButtonClick}
+      />
     </HStack>
   );
 };
