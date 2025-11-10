@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   plugins: [
     react({
       babel: {
@@ -19,17 +19,15 @@ export default defineConfig(({ mode }) => ({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    emptyOutDir: true,
   },
-  server:
-    mode === 'development'
-      ? {
-          proxy: {
-            '/api/shorten': {
-              target: 'https://cleanuri.com/api/v1',
-              changeOrigin: true,
-              rewrite: path => path.replace(/^\/api\/shorten/, '/shorten'),
-            },
-          },
-        }
-      : undefined,
-}));
+  server: {
+    proxy: {
+      '/api/shorten': {
+        target: 'https://cleanuri.com/api/v1',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api\/shorten/, '/shorten'),
+      },
+    },
+  },
+});
