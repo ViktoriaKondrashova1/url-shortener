@@ -3,7 +3,7 @@ import brandRecognitionIcon from '../assets/icon-brand-recognition.svg';
 import detailedRecordsIcon from '../assets/icon-detailed-records.svg';
 import fullyCustomIcon from '../assets/icon-fully-customizable.svg';
 
-export const API_URL = '/api/shorten';
+export const API_URL = import.meta.env.DEV ? '/api/shorten' : 'https://cleanuri.com/api/v1/shorten';
 
 export const APP_LOGO = 'Shortly';
 

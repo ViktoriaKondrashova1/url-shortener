@@ -19,8 +19,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api/shorten': {
-        target: 'http://localhost:5173',
+        target: 'https://cleanuri.com/api/v1',
         changeOrigin: true,
+        rewrite: path => path.replace(/^\/api\/shorten/, '/shorten'),
       },
     },
   },
