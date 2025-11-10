@@ -81,3 +81,5 @@ export const STAT_INFO = [
 ];
 
 export const STORAGE_KEY = 'shortened_links';
+
+export const ITEMS_PER_PAGE = 5;

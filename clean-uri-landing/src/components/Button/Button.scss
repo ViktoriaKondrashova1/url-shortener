@@ -5,9 +5,9 @@
   padding: 0 20px;
   background-color: $color-primary-blue;
   color: white;
-  transition: background-color 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out;
 
   &:hover {
-    background-color: color.scale($color-primary-blue, $lightness: 20%);
+    filter: brightness(110%)
   }
 }
