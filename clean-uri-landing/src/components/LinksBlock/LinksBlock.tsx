@@ -4,10 +4,11 @@ import { Flex } from '@chakra-ui/react';
 import { AppPagination } from '../Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import { ITEMS_PER_PAGE } from '../../constants/constants';
+import { AppButton } from '../Button/Button';
 import './LinksBlock.scss';
 
 export const LinksBlock = () => {
-  const { links } = useLinks();
+  const { links, clearLinks } = useLinks();
   const [page, setPage] = useState<number>(1);
 
   const startRange = (page - 1) * ITEMS_PER_PAGE;
@@ -34,9 +35,12 @@ export const LinksBlock = () => {
           />
         ))}
       </Flex>
-      {links.length > ITEMS_PER_PAGE && (
-        <AppPagination count={links.length} page={page} onPageChange={setPage} />
-      )}
+      <Flex className='pagination'>
+        {links.length > ITEMS_PER_PAGE && (
+          <AppPagination count={links.length} page={page} onPageChange={setPage} />
+        )}
+        <AppButton text='Clear history' onClick={clearLinks} bgColor="token(colors.appRed)"/>
+      </Flex>
     </>
   );
 };
