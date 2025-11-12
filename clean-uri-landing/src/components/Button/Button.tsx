@@ -4,7 +4,8 @@ import "./Button.scss"
 
 interface Props extends ButtonProps {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
+  to?: string;
 }
 
 export const AppButton: FC<Props> = ({ text, onClick, ...rest }) => {
